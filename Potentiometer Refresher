@@ -1,0 +1,19 @@
+int x;
+int y;
+void setup()
+{
+	pinMode(5, INPUT);
+	pinMode(8, INPUT);
+	Serial.begin(9600);
+}
+
+void loop()
+{
+	x = analogRead(5);
+	y = digitalRead(8);
+
+	Serial.print(y);
+	Serial.println(',');
+	
+
+}
