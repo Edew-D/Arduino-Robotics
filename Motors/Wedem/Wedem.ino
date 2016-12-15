@@ -7,38 +7,31 @@
 void foward()
 {
 
-	digitalWrite(LEFT_MOTOR_2A, LOW);
-	digitalWrite(LEFT_MOTOR_1A, HIGH);
-	digitalWrite(RIGHT_MOTOR_1A, HIGH);
-	digitalWrite(RIGHT_MOTOR_2A, LOW);
-	delay(3000);
+	digitalWrite(lr, LOW);
+	digitalWrite(lb, HIGH);
+	digitalWrite(rb, HIGH);
+	digitalWrite(rr, LOW);
 }
 void sqt()
 {
-  	digitalWrite(LEFT_MOTOR_EN, HIGH);
-	digitalWrite(LEFT_MOTOR_2A, LOW);
-	digitalWrite(LEFT_MOTOR_1A, HIGH);
-
-
-	digitalWrite(RIGHT_MOTOR_1A, LOW);
-	digitalWrite(RIGHT_MOTOR_2A, HIGH);
-	delay(1000);
+	digitalWrite(lb, LOW);
+	digitalWrite(lr, HIGH);
+	digitalWrite(rr, LOW);
+	digitalWrite(rb, HIGH);
 }
 void trt()
 {
-	digitalWrite(LEFT_MOTOR_2A, LOW);
-	digitalWrite(LEFT_MOTOR_1A, HIGH);
-
-	digitalWrite(RIGHT_MOTOR_1A, LOW);
-	digitalWrite(RIGHT_MOTOR_2A, HIGH);
+	digitalWrite(lb, LOW);
+	digitalWrite(lr, HIGH);
+	digitalWrite(rr, LOW);
+	digitalWrite(rb, HIGH);
 }
 void still()
 {
-	digitalWrite(LEFT_MOTOR_2A, HIGH);
-	digitalWrite(LEFT_MOTOR_1A, HIGH);
-
-	digitalWrite(RIGHT_MOTOR_1A, HIGH);
-	digitalWrite(RIGHT_MOTOR_2A, HIGH);
+	digitalWrite(lb, HIGH);
+	digitalWrite(lr, HIGH);
+	digitalWrite(rr, HIGH);
+	digitalWrite(rb, HIGH);
 }
 void setup()
 {
