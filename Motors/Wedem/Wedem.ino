@@ -4,6 +4,7 @@
 #define   RIGHT_MOTOR_EN   11
 #define   rr   10
 #define   rb   9
+#define   rightA  1385
 void right()
 {
 
@@ -50,6 +51,15 @@ delay(1385);
 stay();
 
 }
+
+void square()
+{ 
+  right();
+delay(1385);
+stay();
+
+}
+
 
 void setup()
 {
