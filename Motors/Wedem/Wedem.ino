@@ -7,9 +7,9 @@
 void right()
 {
 
-	digitalWrite(lr, HIGH);
+	digitalWrite(lr, LOW);
 	digitalWrite(lb, LOW);
-	digitalWrite(rb, LOW);
+	digitalWrite(rb, LOW );
 	digitalWrite(rr, HIGH);
 }
 
@@ -46,7 +46,7 @@ void stay()
 void t90r()
 { 
   right();
-delay(750);
+delay(1000);
 stay();
 
 }
