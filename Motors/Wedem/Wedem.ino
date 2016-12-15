@@ -46,7 +46,7 @@ void stay()
 void t90r()
 { 
   right();
-delay(740);
+delay(750);
 stay();
 
 }
