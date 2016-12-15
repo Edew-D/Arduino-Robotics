@@ -19,14 +19,14 @@ void sqt()
 	digitalWrite(rr, LOW);
 	digitalWrite(rb, HIGH);
 }
-void trt()
+void right()
 {
 	digitalWrite(lb, LOW);
 	digitalWrite(lr, HIGH);
 	digitalWrite(rr, LOW);
 	digitalWrite(rb, HIGH);
 }
-void still()
+void Stay()
 {
 	digitalWrite(lb, HIGH);
 	digitalWrite(lr, HIGH);
@@ -44,5 +44,15 @@ int x = 5, x <= 12, x++
 }
 void loop()
 {
+forward();
+delay(4000);
+Stay();
+delay(1000);
+right();
+delay(4000);
+sqt();
+delay(1000);
+
+
 
 }
