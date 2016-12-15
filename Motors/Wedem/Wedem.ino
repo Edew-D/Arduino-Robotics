@@ -4,7 +4,7 @@
 #define   RIGHT_MOTOR_EN   8
 #define   rr   9
 #define   rb   10
-void foward()
+void forward()
 {
 
 	digitalWrite(lr, LOW);
@@ -35,7 +35,7 @@ void Stay()
 }
 void setup()
 {
-int x = 5, x <= 12, x++
+ for (int x = 5; x <= 12; x++)
   { 
     digitalWrite(x, HIGH);
   }
