@@ -11,24 +11,23 @@ int sl;
 void right()
 {
 
-  digitalWrite(lr, HIGH);
-  digitalWrite(lb, LOW);
-  digitalWrite(rb, LOW );
+  digitalWrite(lr, LOW );
+  digitalWrite(lb, HIGH);
+  digitalWrite(rb, LOW);
   digitalWrite(rr, HIGH);
 }
 
 void left()
 {
-
-  digitalWrite(lr, LOW);
-  digitalWrite(lb, HIGH);
-  digitalWrite(rb, HIGH);
+  digitalWrite(lr, HIGH);
+  digitalWrite(lb, LOW);
+  digitalWrite(rb, HIGH );
   digitalWrite(rr, LOW);
 }
 void fwd()
 {
-  digitalWrite(lb, HIGH);
-  digitalWrite(lr, LOW);
+  digitalWrite(lb, LOW);
+  digitalWrite(lr, HIGH);
   digitalWrite(rr, HIGH);
   digitalWrite(rb, LOW);
 }
@@ -89,12 +88,17 @@ void loop()
   if (sr == HIGH)
   { 
     left();
-  }
+ }
 
   if (sl == HIGH)
   {
     right();
-  }
+  } 
+  
+  if ((sl == HIGH) && (sr == HIGH))
+  { 
+    fwd();
+  }  
 
 }
  
