@@ -5,8 +5,8 @@
 #define   rr   10
 #define   rb   9
 #define   rightA  1385
-int s;
 int sr;
+int sl;
 
 void right()
 {
@@ -45,7 +45,7 @@ void stay()
   digitalWrite(lr, HIGH); 
   digitalWrite(rr, HIGH);
   digitalWrite(rb, HIGH);
- delay(200);
+  delay(200);
 }
 
 void t90r()
@@ -79,18 +79,28 @@ void setup()
 }
 void loop()
 {
-  s = digitalRead(5);
-  sr = digitalRead(12);
+  sr = digitalRead(5);
+  sl = digitalRead(12);
+  if (sl == LOW)
+  { 
+     fwd();
+  }
+  else
+  {
+   right();
+  }
+
   if (sr == LOW)
   { 
+    
     fwd();
   }
   else
   {
- back();
- delay(500);
- stay();
- t90r();
+    left();
   }
+
 }
+
+
 
