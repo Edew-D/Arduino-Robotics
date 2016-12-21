@@ -11,7 +11,7 @@ int sl;
 void right()
 {
 
-  digitalWrite(lr, LOW);
+  digitalWrite(lr, HIGH);
   digitalWrite(lb, LOW);
   digitalWrite(rb, LOW );
   digitalWrite(rr, HIGH);
