@@ -84,24 +84,27 @@ void loop()
   { 
     fwd();
   }
-
-  if (sr == HIGH)
-  { 
-    left();
- }
-
-  if (sl == HIGH)
-  {
-    right();
-  } 
-  
   if ((sl == HIGH) && (sr == HIGH))
   { 
     fwd();
   }  
+  else if (sr == HIGH)
+  { 
+    left();
+    delay(100);
+  }
+
+  else if (sl == HIGH)
+  {
+    right();
+    delay(100);
+  } 
+
+
 
 }
- 
+
+
 
 
 
