@@ -6,6 +6,7 @@
 #define   rb   9
 #define   rightA  1385
 int s;
+int sr;
 
 void right()
 {
@@ -44,13 +45,15 @@ void stay()
   digitalWrite(lr, HIGH); 
   digitalWrite(rr, HIGH);
   digitalWrite(rb, HIGH);
+ delay(200);
 }
 
 void t90r()
 { 
   right();
-  delay(2870);
+  delay(1435);
   stay();
+  //2870
 
 }
 
@@ -65,24 +68,29 @@ void square()
 
 void setup()
 {
-  for (int x = 6; x <= 12; x++) 
+  for (int x = 6; x <= 11; x++) 
   { 
     pinMode(x, OUTPUT);
   }
   digitalWrite(LEFT_MOTOR_EN, HIGH);
-  digitalWrite(RIGHT_MOTOR_EN, HIGH);0
+  digitalWrite(RIGHT_MOTOR_EN, HIGH);
   pinMode(5, INPUT);
+  pinMode(12, INPUT);
 }
 void loop()
 {
   s = digitalRead(5);
-  if (s == HIGH)
+  sr = digitalRead(12);
+  if (sr == LOW)
   { 
     fwd();
   }
-  else;
+  else
   {
-    t90r();
+ back();
+ delay(500);
+ stay();
+ t90r();
   }
 }
 
