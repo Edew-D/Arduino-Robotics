@@ -81,26 +81,23 @@ void loop()
 {
   sr = digitalRead(5);
   sl = digitalRead(12);
-  if (sl == LOW)
+  if ((sl == LOW) && (sr == LOW))
   { 
-     fwd();
-  }
-  else
-  {
-   right();
-  }
-
-  if (sr == LOW)
-  { 
-    
     fwd();
   }
-  else
-  {
+
+  if (sr == HIGH)
+  { 
     left();
   }
 
+  if (sl == HIGH)
+  {
+    right();
+  }
+
 }
+ 
 
 
 
